@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bootstrap CRUD Data Table for Database with Modal Form</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+  <body>
+    <div class="container">
+        <div class="table-wrapper">
+            <div class="table-title">
+                <div class="row">
+                    <div class="col-sm-6">
+						<h2>Gestion <b>Empresas</b></h2>
+					</div>
+					<div class="col-sm-6">
+						<a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Añadir Empresa</span></a>
+					</div>
+                </div>
+            </div>
+            <table id="tableEmpresa" class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Nombre</th>
+						<th>Numero de nit</th>
+                        <th>Fecha fundacion</th>
+                        <th>Direccion</th>
+                        <th>Opciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+	<!-- Add Modal HTML -->
+	<div id="addEmployeeModal" class="modal fade">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<form>
+					<div class="modal-header">						
+						<h4 class="modal-title">Anadir Empresa</h4>
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					</div>
+					<div class="modal-body">					
+						<div class="form-group">
+							<input id="addId" type="hidden" class="form-control" disabled>
+						</div>
+						<div class="form-group">
+							<label>Nombre</label>
+							<input id="addNombre" type="text" class="form-control" required>
+						</div>
+						<div class="form-group">
+							<label>Numero de nit</label>
+							<input id="addNumeroNit" type="text" class="form-control" required>
+						</div>
+						<div class="form-group">
+							<label>Fecha Fundacion</label>
+							<input id="addFechaFundacion" type="text" class="form-control" required>
+						</div>
+						<div class="form-group">
+							<label>Direccion</label>
+							<input id="addDireccion" type="text" class="form-control" required>
+						</div>					
+					</div>
+					<div class="modal-footer">
+						<input type="button" class="btn btn-default" data-dismiss="modal" value="cancelar">
+						<input type="submit" id="anadirEmpresa" class="btn btn-success" value="anadir">
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<!-- Edit Modal HTML -->
+	<div id="editEmployeeModal" class="modal fade">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<form>
+					<div class="modal-header">						
+						<h4 class="modal-title">Editar Empresa</h4>
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					</div>
+					<div class="modal-body">					
+						<div class="form-group">
+							<label>Id</label>
+							<input id="editId" type="text" class="form-control" disabled>
+						</div>
+						<div class="form-group">
+							<label>Nombre</label>
+							<input id="editNombre" type="text" class="form-control" required>
+						</div>
+						<div class="form-group">
+							<label>Numero de nit</label>
+							<input id="editNumeroNit" type="text" class="form-control" required>
+						</div>
+						<div class="form-group">
+							<label>Fecha fundacion</label>
+							<input id="editFechaFundacion" type="text" class="form-control" required>
+						</div>
+						<div class="form-group">
+							<label>Direccion</label>
+							<input id="editDireccion" type="text" class="form-control" required>
+						</div>					
+					</div>
+					<div class="modal-footer">
+						<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
+						<input  id="editEmpresa" type="submit" class="btn btn-info" value="Guardar">
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<!-- Delete Modal HTML -->
+	<div id="deleteEmployeeModal" class="modal fade">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<form>
+					<div class="modal-header">						
+						<h4 class="modal-title">Eliminar Empresa</h4>
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					</div>
+					<div class="modal-body">					
+						<p>Esta seguro de eliminar esta empresa?</p>
+						<p class="text-warning"><small>Esta accion no se puede deshacer.</small></p>
+					</div>
+					<div class="modal-footer">
+						<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
+						<input id="btEliminar" type="submit" class="btn btn-danger" value="Eliminar">
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+    <script src="CrudEmpresa.js"></script> 
+</body>
+</html>

@@ -1,0 +1,118 @@
+package com.example.demo.model;
+
+import lombok.Data;
+
+import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import javax.persistence.Id;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+
+@Data
+@Entity
+@Table(name="Empresa")
+public class Empresa implements Serializable{
+	
+	private static final long serialVersionUID = -1876059308487662006L;
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private long Id;
+	
+	@Column(name="nombre")
+	private String Nombre;
+	
+	@Column(name="numero_nit")
+	private String Numero_Nit;
+	
+	@Column(name="fecha_fundacion")
+	private String Fecha_Fundacion;
+
+	@Column(name="direccion")
+	private String Direccion;
+
+	
+	
+	
+	public long getId() {
+		return Id;
+	}
+
+
+	public void setId(long id) {
+		Id = id;
+	}
+
+
+
+
+	public String getNombre() {
+		return Nombre;
+	}
+
+
+
+
+	public void setNombre(String nombre) {
+		Nombre = nombre;
+	}
+
+
+
+
+	public String getNumero_Nit() {
+		return Numero_Nit;
+	}
+
+
+
+
+	public void setNumero_Nit(String numero_Nit) {
+		Numero_Nit = numero_Nit;
+	}
+
+
+
+
+	public String getFecha_Fundacion() {
+		return Fecha_Fundacion;
+	}
+
+
+
+
+	public void setFecha_Fundacion(String fecha_Fundacion) {
+		Fecha_Fundacion = fecha_Fundacion;
+	}
+
+
+
+
+	public String getDireccion() {
+		return Direccion;
+	}
+
+
+
+
+	public void setDireccion(String direccion) {
+		Direccion = direccion;
+	}
+
+
+
+
+
+
+	@Override
+	public String toString() {
+		return "Empresa [Id=" + Id + ", Nombre=" + Nombre + ", Numero_Nit=" + Numero_Nit + ", Fecha_Fundacion="
+				+ Fecha_Fundacion + ", Direccion=" + Direccion + "]";
+	}
+
+
+	
+}

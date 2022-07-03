@@ -1,0 +1,19 @@
+package com.example.demo.model;
+
+import lombok.Data;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import javax.persistence.Id;
+
+@Data
+@Entity
+@Table(name="Empresa")
+public class Empresa {
+	
+	@Id
+	private long Id;
+	private String Nombre;
+	private String Numero_Nit;
+	private String Fecha_Fundacion;
+	private String Direccion; 
+}

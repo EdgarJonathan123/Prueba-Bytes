@@ -1,0 +1,10 @@
+package com.example.demo.exception;
+
+public class ResourceNotFoundException {
+	
+	private String resourceName;
+	private String fieldName;
+	private String fieldValue;
+	
+
+}

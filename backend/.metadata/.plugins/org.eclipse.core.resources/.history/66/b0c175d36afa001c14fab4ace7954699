@@ -1,0 +1,29 @@
+package com.example.demo.controller;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.demo.model.Empresa;
+import com.example.demo.service.EmpresaService;
+
+@RestController
+public class EmpresaController {
+
+	private EmpresaService empresaService;
+
+	public EmpresaController(EmpresaService empresaService) {
+		super();
+		this.empresaService = empresaService;
+	}
+	
+	@PostMapping
+	public ResponseEntity<Empresa> guardarEmpresa(@RequestBody Empresa empresa){
+		return new ResponseEntity<>(empresaService.guardarEmpresa(empresa),HttpStatus.CREATED);
+	}
+	
+	
+
+}

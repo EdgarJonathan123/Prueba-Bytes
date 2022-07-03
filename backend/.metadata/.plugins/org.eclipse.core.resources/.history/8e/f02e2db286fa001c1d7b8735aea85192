@@ -1,0 +1,53 @@
+package com.example.demo.service.impl;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.stereotype.Service;
+
+import com.example.demo.exception.ResourceNotFoundException;
+import com.example.demo.model.Empresa;
+import com.example.demo.repository.EmpresaRepository;
+import com.example.demo.service.EmpresaService;
+
+@Service
+public class EmpresaServiceImpl implements EmpresaService{
+
+	private EmpresaRepository empresaRepository;
+	
+	public EmpresaServiceImpl(EmpresaRepository empresaRepository) {
+		super();
+		this.empresaRepository = empresaRepository;
+	}
+
+	@Override
+	public Empresa guardarEmpresa(Empresa empresa) {
+		return empresaRepository.save(empresa);
+	}
+
+	@Override
+	public List<Empresa> getAllEmpresas() {
+		return empresaRepository.findAll();
+	}
+
+
+	@Override
+	public Empresa findById(long id) {
+		Optional<Empresa> empresa = empresaRepository.findById(id);
+		if(empresa.isPresent()) {
+			return empresa.get();
+		}else {
+			throw new ResourceNotFoundException("Empresa", "Id", id);
+		}
+	}
+	
+	@Override
+	public Empresa actualizarEmpresa(Empresa empresa,long id) {
+		
+
+		return null;
+	}
+
+	
+}
+

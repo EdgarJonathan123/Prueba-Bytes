@@ -1,0 +1,44 @@
+package com.example.demo.model;
+
+import lombok.Data;
+
+import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import javax.persistence.Id;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+
+@Data
+@Entity
+@Table(name="Empresa")
+public class Empresa implements Serializable{
+	
+	private static final long serialVersionUID = -1876059308487662006L;
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private long Id;
+	
+	@Column(name="nombre")
+	private String Nombre;
+	
+	@Column(name="numero_nit")
+	private String Numero_Nit;
+	
+	@Column(name="fecha_fundacion")
+	private String Fecha_Fundacion;
+
+	@Column(name="direccion")
+	private String Direccion;
+
+	@Override
+	public String toString() {
+		return "Empresa [Id=" + Id + ", Nombre=" + Nombre + ", Numero_Nit=" + Numero_Nit + ", Fecha_Fundacion="
+				+ Fecha_Fundacion + ", Direccion=" + Direccion + "]";
+	} 
+	
+	
+}

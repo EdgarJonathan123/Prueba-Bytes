@@ -1,0 +1,28 @@
+package com.example.demo.model;
+
+import lombok.Data;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import javax.persistence.Id;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+
+@Data
+@Entity
+@Table(name="Empresa")
+public class Empresa {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private long Id;
+	
+	@Column(name="Nombre", nullable=false)
+	private String Nombre;
+	
+	@Column(name="Numero_Nit")
+	private String Numero_Nit;
+	private String Fecha_Fundacion;
+	private String Direccion; 
+}

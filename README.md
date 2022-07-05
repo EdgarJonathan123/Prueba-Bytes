@@ -1,11 +1,11 @@
 # Prueba Tecnica Bytes
-## _Implementacion de una seria de ejercicios tanto frontend y backend_
+## _Implementacion de una serie de ejercicios tanto frontend y backend_
 
 
 ## Estructura de ejercicios
 
 
-| Plugin | README |
+| Ejercicio | README |
 | ------ | ------ |
 | Ejercicios Backend | [backend/ejerciciosSimple/README.md][PlDb] |
 | Crud Spring | [backend/empresa-backend/README.md][PlGh] |
@@ -19,5 +19,5 @@
 
    [PlDb]: <https://github.com/EdgarJonathan123/Prueba-Bytes/tree/main/backend/ejerciciosSimple>
    [PlGh]: <https://github.com/EdgarJonathan123/Prueba-Bytes/tree/main/backend/empresa-backend>
-   [PlGd]: <https://github.com/EdgarJonathan123/Prueba-Bytes/blob/main/frontend/README.md>
-   [PlOd]: <https://github.com/EdgarJonathan123/Prueba-Bytes/blob/main/frontend/CrudEmpresa/README.md>
+   [PlGd]: <https://github.com/EdgarJonathan123/Prueba-Bytes/tree/main/frontend>
+   [PlOd]: <https://github.com/EdgarJonathan123/Prueba-Bytes/tree/main/frontend/CrudEmpresa>

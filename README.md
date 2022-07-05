@@ -18,6 +18,6 @@
 
 
    [PlDb]: <https://github.com/EdgarJonathan123/Prueba-Bytes/tree/main/backend/ejerciciosSimple>
-   [PlGh]: <https://github.com/EdgarJonathan123/Prueba-Bytes/blob/main/backend/empresa-backend/README.md>
+   [PlGh]: <https://github.com/EdgarJonathan123/Prueba-Bytes/tree/main/backend/empresa-backend>
    [PlGd]: <https://github.com/EdgarJonathan123/Prueba-Bytes/blob/main/frontend/README.md>
    [PlOd]: <https://github.com/EdgarJonathan123/Prueba-Bytes/blob/main/frontend/CrudEmpresa/README.md>
